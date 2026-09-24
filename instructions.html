@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Instructions for an education focused responsible AI assessment that can be applied across countries and system levels."><title>Responsible AI in Education Compass | Instructions</title>
+<style>
+:root{--ink:#17324d;--muted:#526579;--line:#d8e0e8;--wash:#f3f7fa;--blue:#145da0;--pale:#eaf3fb;--gold:#fff5e5}*{box-sizing:border-box}body{margin:0;background:#f7f9fb;color:var(--ink);font:16px/1.55 system-ui,"Segoe UI",sans-serif}header{background:#103f6b;color:#fff;padding:1.7rem max(1rem,calc((100% - 1050px)/2))}header h1{margin:0 0 .35rem}header p{margin:0;color:#e7f1fa}.wrap{max-width:1050px;margin:1.2rem auto;padding:0 1rem}nav{display:flex;flex-wrap:wrap;gap:.35rem;background:white;border:1px solid var(--line);border-radius:9px;padding:.6rem}nav a{padding:.3rem .55rem;color:#145484;text-decoration:none;border-radius:5px}nav a:hover,nav a:focus{background:var(--pale);text-decoration:underline}section{background:white;border:1px solid var(--line);border-radius:10px;padding:1rem;margin:1rem 0}.notice{background:var(--gold);border-color:#e4c889}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.8rem}.card{background:var(--wash);border:1px solid var(--line);border-radius:8px;padding:.85rem}.muted,.footer{color:var(--muted)}.footer{display:flex;align-items:center;justify-content:space-between;gap:1rem;font-size:.9rem;padding:1rem 0 2rem;border-top:1px solid var(--line)}.footer-source{font-size:13px;font-weight:600;white-space:nowrap}table{border-collapse:collapse;width:100%;margin:.6rem 0}th,td{border:1px solid var(--line);padding:.6rem;text-align:left;vertical-align:top}th{background:var(--wash)}li{margin:.35rem 0}.button{display:inline-block;background:var(--blue);color:white;text-decoration:none;padding:.45rem .7rem;border-radius:6px;font-weight:650}@media(max-width:700px){header{padding:1.3rem 1rem}table{font-size:.92rem}.footer{align-items:flex-start;flex-direction:column}}
+
+/* Shared policy toolkit presentation */
+:root{--ink:#142d46;--muted:#52677d;--line:#d9e2eb;--wash:#f2f5f8;--blue:#1a5fa8;--pale:#eaf3fb;--gold:#fff4dc;--green:#205f9a;--green-pale:#e8f2fc;--amber:#946100;--amber-pale:#fff3d8;--orange:#b44c16;--orange-pale:#fff0e6;--red:#a42a35;--red-pale:#fdebed;--shadow:0 8px 25px rgba(12,41,71,.06)}
+body{background:#f2f5f8;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+header{background:linear-gradient(118deg,#0b2744 0%,#113e67 72%,#1d5680 100%);padding-top:1.9rem;padding-bottom:1.9rem}
+header h1{letter-spacing:-.025em;line-height:1.15}
+header p{max-width:850px;line-height:1.55}
+.wrap{max-width:1120px}
+nav{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:.5rem;gap:.2rem;box-shadow:var(--shadow);margin-bottom:1.25rem}
+nav a{color:#274a68;padding:.52rem .78rem;border-radius:8px;font-size:.94rem;font-weight:620}
+nav a[aria-current=page],nav a:hover,nav a:focus{background:var(--pale);color:#124978}
+section,section.panel,.notice,.card,.reportcard{border-radius:13px;border-color:var(--line);box-shadow:var(--shadow)}
+section,section.panel{padding:1.2rem;margin:1rem 0}
+section h2{font-size:1.28rem;line-height:1.3;letter-spacing:-.018em}
+section h3{font-size:1.05rem;line-height:1.35}
+.notice{padding:1rem 1.1rem}
+.section-guide{background:#f3f7fb;border-color:#d5e2ed;border-left-color:#1a5fa8;border-radius:10px}
+.question,.field{border-radius:10px;border-color:#dce5ed}
+.question:focus-within,.field:focus-within{border-color:#8ab5da;box-shadow:0 0 0 3px #1a5fa81c}
+.question legend{line-height:1.45}
+.question input:not([type=radio]):not([type=checkbox]),.question textarea,.field input,.field textarea,.field select,.evidence{border-radius:8px;border-color:#b8c8d8}
+.question input:focus,.question textarea:focus,.field input:focus,.field textarea:focus,.field select:focus{outline:3px solid #1a5fa826;border-color:#4e91c4}
+.choice{border-radius:8px;transition:background-color .15s,border-color .15s}
+.choice:hover{background:#f1f6fa}
+button,.actions button{border-radius:8px;background:#14558f;box-shadow:0 2px 6px #103c631c}
+button:hover,.actions button:hover{filter:brightness(1.08)}
+.footer{display:flex;align-items:center;justify-content:space-between;gap:1rem;border-top:1px solid var(--line);font-size:.88rem;padding:1rem 0 2rem;margin-top:1.2rem}
+.footer-source{font-size:13px!important;font-weight:650;white-space:nowrap;color:#536a80}
+.footer-source:hover{color:#145da0}
+.risk-tier{display:inline-flex;align-items:center;gap:.35rem;border-radius:999px;padding:.27rem .68rem;font-size:.85rem;line-height:1.3;font-weight:750}
+.risk-tier.low{background:var(--green-pale);color:var(--green)}
+.risk-tier.medium{background:var(--amber-pale);color:var(--amber)}
+.risk-tier.high{background:var(--orange-pale);color:var(--orange)}
+.risk-tier.excessive{background:var(--red-pale);color:var(--red)}
+.practice-good{border-left:4px solid var(--green)!important;background:var(--green-pale)!important}
+.practice-partial{border-left:4px solid #d39a18!important;background:var(--amber-pale)!important}
+.practice-gap{border-left:4px solid var(--red)!important;background:var(--red-pale)!important}
+.practice-na{border-left:4px solid #8393a2!important;background:#eef1f4!important}
+.answer-status{display:inline-flex;align-items:center;border-radius:999px;padding:.16rem .52rem;margin:.15rem 0 .25rem;font-size:.78rem;font-weight:750;line-height:1.35}
+.answer-status.action{background:var(--amber-pale);color:#815400}
+.answer-status.gap{background:var(--red-pale);color:var(--red)}
+.answer-status.clear{background:var(--green-pale);color:var(--green)}
+.answer-status.na{background:#edf1f4;color:#536474}
+.answer-status.missing{background:#eef2f6;color:#526579}
+.score-summary{display:flex;flex-wrap:wrap;gap:.45rem;margin:.7rem 0}
+.score-summary span{border-radius:999px;padding:.28rem .62rem;font-size:.84rem;font-weight:700}
+.score-summary .good{background:var(--green-pale);color:var(--green)}
+.score-summary .partial{background:var(--amber-pale);color:var(--amber)}
+.score-summary .gap{background:var(--red-pale);color:var(--red)}
+.score-summary .na{background:#edf1f4;color:#536474}
+@media(max-width:720px){nav a{padding:.48rem .57rem;font-size:.9rem}.footer{align-items:flex-start;flex-direction:column}.section-guide{grid-template-columns:1fr;gap:.6rem}}
+@media print{body{background:#fff;color:#111}header{background:#fff;color:#111;border-bottom:2px solid #17324d}header p{color:#333}nav,button,.no-print{display:none!important}.wrap{max-width:none;margin:0;padding:0}section,.panel{box-shadow:none!important}}
+
+.tierbox{background:#f5f8fb!important;border:1px solid var(--line)!important;border-left:4px solid #1a5fa8!important;border-radius:11px!important;padding:1rem!important}
+.tier-choice{display:flex;align-items:flex-start;gap:.55rem;padding:.62rem .7rem!important;margin:.35rem 0!important;border:1px solid transparent;border-radius:9px;line-height:1.45}
+.tier-choice input{flex:0 0 auto;margin-top:.3rem!important}
+.tier-choice.low{background:#e8f2fc;color:#1b527f;border-color:#c8dff1}
+.tier-choice.medium{background:#fff3d8;color:#805600;border-color:#eddbad}
+.tier-choice.high{background:#fff0e6;color:#974011;border-color:#efcbb6}
+.tier-choice.excessive{background:#fdebed;color:#912934;border-color:#e9c1c6}
+.tier-choice.is-selected{box-shadow:0 0 0 2px currentColor inset;font-weight:700}
+.choice.practice-good{border-color:#c8dff1}
+.choice.practice-partial{border-color:#eddbad}
+.choice.practice-gap{border-color:#e9c1c6}
+.choice.practice-na{border-color:#d7dee5}
+.answer-status.review{background:#eaf3fb;color:#215780}
+</style><link rel="stylesheet" href="theme.css"></head><body id="top">
+<header><h1>Instructions for use</h1><p>What this toolkit is for, how to choose a path and how to use the assessment results.</p></header>
+<main class="wrap">
+<nav class="package-nav no-print" aria-label="Assessment pages"><a href="index.html">Home</a><a href="instructions.html" aria-current="page">Instructions</a><a href="quick-assessment.html">Quick assessment</a><a href="thorough-assessment.html">Thorough assessment</a><a href="scoring.html">Scoring</a><a href="policy-and-data.html">Policy &amp; data</a></nav>
+<section class="notice"><strong>Purpose</strong>This toolkit helps education authorities, institutions and teams identify educational, ethical, legal, social, operational and technical concerns in a specific AI use, document safeguards and agree actions. It can be used across countries without assuming one administrative structure, curriculum, pedagogical model or legal framework.</section>
+<section><h2>Who should take part</h2><p>Include the functions relevant to the use. These may include education policy and programme owners, technical and operational teams, data governance, legal, privacy, cybersecurity, procurement, accessibility, inspection, school or institution leadership, pedagogical expertise and representatives of affected learners, families or staff. Record who participated and which important perspectives were unavailable.</p></section>
+<section><h2>Choose one of two assessments</h2><table><thead><tr><th>Assessment</th><th>Use it when</th><th>What it covers</th></tr></thead><tbody>
+<tr><td><strong>Quick assessment</strong></td><td>You need a concise first review, the education use is bounded, and there is no clear signal of significant or uncertain harm.</td><td>16 questions: four risk prompts, eight core safeguard checks, three synthesis prompts and one decision.</td></tr>
+<tr><td><strong>Thorough assessment</strong></td><td>The system may influence important education decisions, opportunities, services, resources, data, safety, rights, reputation or working conditions, or the Quick assessment leaves important questions open.</td><td>24 plain language questions: six risk prompts, 15 checks across six principles, and three final prompts.</td></tr>
+</tbody></table><p>If the use may be unlawful or prohibited, or an unresolved risk could cause severe or irreversible harm, pause the ordinary review and seek appropriate legal, ethics, human rights and technical advice.</p><p><a class="button" href="quick-assessment.html">Open Quick assessment</a> <a class="button" href="thorough-assessment.html">Open Thorough assessment</a></p></section>
+<section><h2>How to complete a review</h2><ol><li><strong>Define the education context.</strong> Describe the purpose, system level, responsible authority or institution, users, affected groups, data and decisions or services involved.</li><li><strong>Choose the path.</strong> Start with Quick when possible effects are limited. Move to Thorough when the system influences important recommendations or decisions, uses sensitive data, operates at scale or leaves risks unclear.</li><li><strong>Complete the risk screen.</strong> Answer every prompt and consider uncertainty, scale, human review and possible consequences together.</li><li><strong>Review all six principles.</strong> Use evidence from the applicable education, institutional and country context. Seek specialist input when the team cannot confirm a technical, educational or legal point.</li><li><strong>Agree on actions.</strong> Record the main risks, what will reduce them, who is responsible, when the work will be completed and what evidence will show completion.</li><li><strong>Record the decision.</strong> Choose the most suitable next step, from proceeding as planned to adding safeguards, running a pilot, strengthening capacity, reviewing policy or procurement, seeking specialist review or not proceeding.</li><li><strong>Export and store.</strong> Save the agreed record under the applicable information management and privacy rules.</li></ol></section>
+<section><h2>When to revisit the assessment</h2><p>Begin before procurement, model selection or data sharing where possible. Review again before a pilot, operational use, expansion to new groups or institutions, or a material change. Reopen it after an incident, complaint, change in data, supplier, policy, infrastructure or education context, or unexpected outcomes.</p></section>
+<section><h2>Understand the result</h2><p>The forms record team responses and decisions. They do not test the live system or confirm that every answer is correct. Quick suggests a route from the highest concern selected. Thorough reports a risk percentage and six separate principle indicators. These results are kept separate. The final section records the main risks, actions and team decision. See <a href="scoring.html">Scoring</a> for the calculation.</p><p>A recommendation to proceed is not approval by itself. The person or group with authority must consider the evidence, conditions, affected people and local requirements.</p></section>
+<section><h2>Browser and data handling</h2><p>Answers are processed in the browser and are not submitted to an assessment service. They are cleared when the page closes. The forms do not connect to AI system telemetry, service databases or operational case data, so they do not provide real time monitoring. Do not enter unnecessary personal data, case details, security secrets or confidential information.</p></section>
+<div class="footer"><span>Facilitation guide · Version 2.1. Review local requirements before operational use.</span><a class="footer-source" href="#top">Back to top</a><a class="footer-source" href="sources.html">Sources</a></div>
+</main></body></html>
+<script src="theme.js?v=spanish-toggle-v6"></script>
