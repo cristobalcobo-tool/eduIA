@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="theme.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A thorough responsible AI self assessment for education systems, authorities, institutions and services.">
+<title>Responsible AI in Education Compass | Thorough assessment</title>
+<style>
+:root{--ink:#17324d;--muted:#526579;--line:#d8e0e8;--wash:#f4f7fa;--blue:#145da0;--blue2:#eaf3fb;--warn:#8a4b00;--warnbg:#fff5e5;--good:#205f9a;--goodbg:#edf6fd;--white:#fff;--shadow:0 2px 10px rgba(18,40,64,.06)}
+*{box-sizing:border-box}body{margin:0;background:#f7f9fb;color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}header{background:#103f6b;color:#fff;padding:2rem max(1rem,calc((100% - 1050px)/2))}header h1{margin:0 0 .5rem;font-size:1.8rem}header p{margin:.25rem 0;color:#e6f1fa;max-width:900px}.wrap{max-width:1050px;margin:1.5rem auto;padding:0 1rem}.notice{padding:1rem 1.1rem;border:1px solid #e5c78b;background:var(--warnbg);border-radius:10px;color:#583b12;margin:1rem 0 1.5rem}.notice strong{display:block;margin-bottom:.3rem}section.panel{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:1.2rem;margin:1rem 0;box-shadow:var(--shadow)}h2{margin:.1rem 0 1rem;font-size:1.35rem}h3{margin:.1rem 0 .6rem;font-size:1.08rem}.lede{color:var(--muted);margin-top:-.5rem}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.field,.question{border:1px solid var(--line);border-radius:9px;padding:.85rem;background:#fff;margin:.75rem 0}.field label,.question legend{font-weight:650}.field input,.field textarea,.field select,.question textarea{display:block;width:100%;margin-top:.45rem;border:1px solid #aebdca;border-radius:7px;padding:.65rem;font:inherit;color:var(--ink);background:#fff}.question{margin:.8rem 0}.question legend{padding:0 .2rem;max-width:100%}.question fieldset{border:0;padding:0;margin:0}.choices{display:grid;gap:.35rem;margin:.5rem 0}.choice{display:flex;gap:.55rem;align-items:flex-start;padding:.35rem .4rem;border-radius:6px}.choice:hover{background:var(--wash)}.choice input{margin-top:.3rem;flex:0 0 auto;accent-color:var(--blue)}.hint{font-size:.9rem;color:var(--muted)}.optional{font-weight:400;color:var(--muted);font-size:.88rem}.bar{height:9px;border-radius:8px;background:#e3eaf0;overflow:hidden;margin:.6rem 0}.bar span{height:100%;display:block;background:#2b78b8;width:0;transition:width .2s}.actions{display:flex;flex-wrap:wrap;gap:.55rem;margin:1rem 0}.actions button{border:0;border-radius:8px;padding:.7rem 1rem;background:var(--blue);color:white;font:inherit;font-weight:650;cursor:pointer}.actions button.secondary{background:#eaf0f5;color:var(--ink);border:1px solid var(--line)}.actions button:hover{filter:brightness(.95)}.tag{display:inline-block;border-radius:999px;background:var(--blue2);color:#114d7f;padding:.15rem .6rem;font-size:.82rem;font-weight:650}.tierbox{background:var(--blue2);padding:.9rem;border-radius:9px}.tierbox label{display:flex;gap:.5rem;align-items:flex-start;margin:.3rem 0}.tierbox input{margin-top:.35rem}.screening{border-left:4px solid #5c89ad}.report{display:none}.report.ready{display:block}.report h2{margin-top:.2rem}.reportcard{background:var(--wash);border:1px solid var(--line);border-radius:8px;padding:.85rem;margin:.75rem 0}.followup li{margin:.35rem 0}.footer{color:var(--muted);font-size:.9rem;padding:1rem 0 2rem}.hidden{display:none!important}.error{color:#8e2424;font-weight:650}.ok{color:var(--good);background:var(--goodbg);padding:.8rem;border-radius:8px}.small{font-size:.88rem;color:var(--muted)}details summary{cursor:pointer;font-weight:650}code{white-space:normal;overflow-wrap:anywhere}
+nav.package-nav{display:flex;flex-wrap:wrap;gap:.3rem;background:#fff;border:1px solid var(--line);border-radius:9px;padding:.6rem;margin:.5rem 0 1rem}nav.package-nav a{padding:.3rem .5rem;color:#145484;text-decoration:none;border-radius:5px}nav.package-nav a:hover,nav.package-nav a:focus{background:var(--blue2);text-decoration:underline}
+@media(max-width:700px){.grid{grid-template-columns:1fr}header{padding:1.4rem 1rem}header h1{font-size:1.45rem}.wrap{margin:1rem auto}}
+@media print{body{background:#fff;font-size:11pt}header{background:#fff;color:#111;border-bottom:2px solid #17324d;padding:0 0 1rem}header p{color:#333}.wrap{max-width:none;margin:0;padding:0}.panel{box-shadow:none!important;break-inside:avoid}.actions,.no-print{display:none!important}.report{display:block!important}.question{break-inside:avoid}.notice{background:#fff;border-color:#777;color:#222}}
+
+.section-guide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem;background:#f3f7fb;border:1px solid #d7e4ee;border-left:4px solid #145da0;border-radius:8px;padding:.85rem 1rem;margin:.55rem 0 1rem}
+.section-guide p{margin:0;color:#334e68;font-size:.93rem;line-height:1.45}
+.section-guide strong{display:block;color:#145484;font-size:12px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.2rem}
+.footer{display:flex;align-items:center;justify-content:space-between;gap:1rem;border-top:1px solid var(--line)}
+.footer-source{font-size:13px;font-weight:600;white-space:nowrap}
+@media(max-width:720px){.section-guide{grid-template-columns:1fr;gap:.6rem}.footer{align-items:flex-start;flex-direction:column}}
+
+.question textarea{display:block;box-sizing:border-box;width:100%;max-width:100%;min-height:9rem;margin:.55rem 0 .15rem;padding:.75rem;border:1px solid #aebdca;border-radius:7px;font:inherit;line-height:1.5;color:var(--ink);background:#fff;resize:vertical}
+.question input:not([type=radio]):not([type=checkbox]){display:block;box-sizing:border-box;width:100%;max-width:100%;min-height:2.65rem;margin-top:.4rem;padding:.6rem;border:1px solid #aebdca;border-radius:7px;font:inherit;color:var(--ink);background:#fff}
+.question label.small{display:block;margin-top:.75rem;font-size:13px;line-height:1.4;font-weight:600;color:var(--muted)}
+.question label.small input{display:block;width:100%;max-width:100%;margin-top:.4rem}
+.field input[type=radio],.field input[type=checkbox],.tierbox input[type=radio],.tierbox input[type=checkbox]{width:1rem;height:1rem;flex:0 0 1rem;display:inline-block}
+.question legend{font-size:1rem;line-height:1.45}
+
+.tierbox label:not(:first-child){font-weight:500;line-height:1.45}.question legend{max-width:100%}
+
+/* Keep long prompts and form controls inside the content column */
+fieldset.question{display:block;min-width:0;width:100%;max-width:100%;margin:1rem 0;padding:1rem 1.1rem}
+fieldset.question>legend{float:none;width:auto;max-width:100%;white-space:normal;line-height:1.45;padding:0 .25rem}
+fieldset.question>textarea,fieldset.question>input:not([type=radio]):not([type=checkbox]){display:block;box-sizing:border-box;width:100%;max-width:100%;min-width:0}
+fieldset.question>.choices,fieldset.question>.hint{width:100%;max-width:100%}
+fieldset.question label.small{display:block;width:100%;margin-top:.75rem;line-height:1.4}
+fieldset.question label.small input{display:block;box-sizing:border-box;width:100%;max-width:100%;min-width:0;margin-top:.4rem}
+/* Shared policy toolkit presentation */
+:root{--ink:#142d46;--muted:#52677d;--line:#d9e2eb;--wash:#f2f5f8;--blue:#1a5fa8;--pale:#eaf3fb;--gold:#fff4dc;--green:#205f9a;--green-pale:#e8f2fc;--amber:#946100;--amber-pale:#fff3d8;--orange:#b44c16;--orange-pale:#fff0e6;--red:#a42a35;--red-pale:#fdebed;--shadow:0 8px 25px rgba(12,41,71,.06)}
+body{background:#f2f5f8;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+header{background:linear-gradient(118deg,#0b2744 0%,#113e67 72%,#1d5680 100%);padding-top:1.9rem;padding-bottom:1.9rem}
+header h1{letter-spacing:-.025em;line-height:1.15}
+header p{max-width:850px;line-height:1.55}
+.wrap{max-width:1120px}
+nav{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:.5rem;gap:.2rem;box-shadow:var(--shadow);margin-bottom:1.25rem}
+nav a{color:#274a68;padding:.52rem .78rem;border-radius:8px;font-size:.94rem;font-weight:620}
+nav a[aria-current=page],nav a:hover,nav a:focus{background:var(--pale);color:#124978}
+section,section.panel,.notice,.card,.reportcard{border-radius:13px;border-color:var(--line);box-shadow:var(--shadow)}
+section,section.panel{padding:1.2rem;margin:1rem 0}
+section h2{font-size:1.28rem;line-height:1.3;letter-spacing:-.018em}
+section h3{font-size:1.05rem;line-height:1.35}
+.notice{padding:1rem 1.1rem}
+.section-guide{background:#f3f7fb;border-color:#d5e2ed;border-left-color:#1a5fa8;border-radius:10px}
+.question,.field{border-radius:10px;border-color:#dce5ed}
+.question:focus-within,.field:focus-within{border-color:#8ab5da;box-shadow:0 0 0 3px #1a5fa81c}
+.question legend{line-height:1.45}
+.question input:not([type=radio]):not([type=checkbox]),.question textarea,.field input,.field textarea,.field select,.evidence{border-radius:8px;border-color:#b8c8d8}
+.question input:focus,.question textarea:focus,.field input:focus,.field textarea:focus,.field select:focus{outline:3px solid #1a5fa826;border-color:#4e91c4}
+.choice{border-radius:8px;transition:background-color .15s,border-color .15s}
+.choice:hover{background:#f1f6fa}
+button,.actions button{border-radius:8px;background:#14558f;box-shadow:0 2px 6px #103c631c}
+button:hover,.actions button:hover{filter:brightness(1.08)}
+.footer{display:flex;align-items:center;justify-content:space-between;gap:1rem;border-top:1px solid var(--line);font-size:.88rem;padding:1rem 0 2rem;margin-top:1.2rem}
+.footer-source{font-size:13px!important;font-weight:650;white-space:nowrap;color:#536a80}
+.footer-source:hover{color:#145da0}
+.risk-tier{display:inline-flex;align-items:center;gap:.35rem;border-radius:999px;padding:.27rem .68rem;font-size:.85rem;line-height:1.3;font-weight:750}
+.risk-tier.low{background:var(--green-pale);color:var(--green)}.risk-tier.missing{background:#eef2f6;color:#526579}.risk-live{background:#f3f7fb;border:1px solid #d5e2ed;border-left:4px solid #1a5fa8;border-radius:10px;padding:1rem 1.1rem;margin:1rem 0}.risk-live p{margin:.45rem 0}
+.risk-tier.medium{background:var(--amber-pale);color:var(--amber)}
+.risk-tier.high{background:var(--orange-pale);color:var(--orange)}
+.risk-tier.excessive{background:var(--red-pale);color:var(--red)}
+.practice-good{border-left:4px solid var(--green)!important;background:var(--green-pale)!important}
+.practice-partial{border-left:4px solid #d39a18!important;background:var(--amber-pale)!important}
+.practice-gap{border-left:4px solid var(--red)!important;background:var(--red-pale)!important}
+.practice-na{border-left:4px solid #8393a2!important;background:#eef1f4!important}
+.answer-status{display:inline-flex;align-items:center;border-radius:999px;padding:.16rem .52rem;margin:.15rem 0 .25rem;font-size:.78rem;font-weight:750;line-height:1.35}
+.answer-status.action{background:var(--amber-pale);color:#815400}
+.answer-status.gap{background:var(--red-pale);color:var(--red)}
+.answer-status.clear{background:var(--green-pale);color:var(--green)}
+.answer-status.na{background:#edf1f4;color:#536474}
+.answer-status.missing{background:#eef2f6;color:#526579}
+.score-summary{display:flex;flex-wrap:wrap;gap:.45rem;margin:.7rem 0}
+.score-summary span{border-radius:999px;padding:.28rem .62rem;font-size:.84rem;font-weight:700}
+.score-summary .good{background:var(--green-pale);color:var(--green)}
+.score-summary .partial{background:var(--amber-pale);color:var(--amber)}
+.score-summary .gap{background:var(--red-pale);color:var(--red)}
+.score-summary .na{background:#edf1f4;color:#536474}
+@media(max-width:720px){nav a{padding:.48rem .57rem;font-size:.9rem}.footer{align-items:flex-start;flex-direction:column}.section-guide{grid-template-columns:1fr;gap:.6rem}}
+@media print{body{background:#fff;color:#111}header{background:#fff;color:#111;border-bottom:2px solid #17324d}header p{color:#333}nav,button,.no-print{display:none!important}.wrap{max-width:none;margin:0;padding:0}section,.panel{box-shadow:none!important}}
+
+.tierbox{background:#f5f8fb!important;border:1px solid var(--line)!important;border-left:4px solid #1a5fa8!important;border-radius:11px!important;padding:1rem!important}
+.tier-choice{display:flex;align-items:flex-start;gap:.55rem;padding:.62rem .7rem!important;margin:.35rem 0!important;border:1px solid transparent;border-radius:9px;line-height:1.45}
+.tier-choice input{flex:0 0 auto;margin-top:.3rem!important}
+.tier-choice.low{background:#e8f2fc;color:#1b527f;border-color:#c8dff1}
+.tier-choice.medium{background:#fff3d8;color:#805600;border-color:#eddbad}
+.tier-choice.high{background:#fff0e6;color:#974011;border-color:#efcbb6}
+.tier-choice.excessive{background:#fdebed;color:#912934;border-color:#e9c1c6}
+.tier-choice.is-selected{box-shadow:0 0 0 2px currentColor inset;font-weight:700}
+.choice.practice-good{border-color:#c8dff1}
+.choice.practice-partial{border-color:#eddbad}
+.choice.practice-gap{border-color:#e9c1c6}
+.choice.practice-na{border-color:#d7dee5}
+.answer-status.review{background:#eaf3fb;color:#215780}
+.record-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin:.1rem 0 .2rem}.record-heading h2{margin:0}.record-badge{display:inline-flex;align-items:center;border:1px solid #c9ddec;border-radius:999px;padding:.28rem .65rem;background:#f3f8fc;color:#1a5fa8;font-size:.78rem;font-weight:750;white-space:nowrap}.record-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.field-wide{grid-column:1/-1}.field input::placeholder,.field textarea::placeholder{color:#7b8fa3;opacity:1}.record-note{margin:.8rem 0 0;color:var(--muted);font-size:.88rem}.record-panel{border-top:4px solid #1a5fa8!important}
+@media(max-width:720px){.record-heading{display:block}.record-badge{margin-top:.65rem}.record-grid{grid-template-columns:1fr}.field-wide{grid-column:auto}}
+.summary-ready{display:flex;align-items:flex-start;gap:.7rem;background:#edf6fd;border:1px solid #bdd9ed;border-left:4px solid #205f9a;color:#1b527f;border-radius:10px;padding:.8rem 1rem;margin:.8rem 0}.summary-ready[hidden]{display:none}.summary-ready span{font-size:1.1rem;font-weight:800;line-height:1.3}.summary-ready strong{display:block}.summary-ready p{margin:.1rem 0 0;color:#405e79;font-size:.92rem}.actions button:disabled{opacity:.55;cursor:not-allowed;box-shadow:none}
+.assessment-section{border:1px solid var(--line);border-radius:12px;background:#fff;margin:.85rem 0;overflow:hidden}.assessment-section>summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.1rem;cursor:pointer;font-weight:750;color:var(--ink);background:#f7fafc}.assessment-section>summary:hover,.assessment-section>summary:focus{background:#eef5fa}.assessment-section[open]>summary{border-bottom:1px solid var(--line);background:#edf5fb}.assessment-section-body{padding:0 1rem 1rem}.section-count{flex:none;border-radius:999px;background:#e8f1f8;color:#315a79;padding:.2rem .55rem;font-size:.78rem;font-weight:750}.assessment-section[open] .section-count{background:#fff;color:#1a5fa8}.section-help{margin:.35rem 0 0;color:var(--muted);font-size:.9rem}.hint-details summary{color:#245a83}.hint-details>div{padding:.45rem 0 0;line-height:1.5}@media print{.assessment-section-body{display:block!important}.assessment-section>summary{border-bottom:1px solid #aaa}.section-count{display:none}}
+.notice{position:relative;overflow:hidden;padding:1.35rem 1.45rem 1.25rem;background:linear-gradient(135deg,#fffaf0,#fff4dd);border:1px solid #e3c27b;border-left:5px solid #c77813;color:#4e3615;box-shadow:0 8px 20px rgba(107,74,22,.08)}.notice-head{display:flex;align-items:baseline;flex-wrap:wrap;gap:.75rem;margin-bottom:.35rem}.notice-label{font-size:.73rem;letter-spacing:.11em;text-transform:uppercase;font-weight:800;color:#96601c}.notice h2{margin:0;font-size:1.25rem;line-height:1.2;color:#5c3b12}.notice-lead{margin:.25rem 0 0;max-width:900px;color:#664b25;line-height:1.55}.notice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;margin-top:1rem}.notice-grid>div{background:rgba(255,255,255,.66);border:1px solid #ecd3a4;border-radius:10px;padding:.75rem .85rem}.notice-grid strong{display:block;margin-bottom:.2rem;color:#794900;font-size:.84rem;letter-spacing:.04em;text-transform:uppercase}.notice-grid p,.notice-foot{margin:0;color:#644b28;font-size:.92rem;line-height:1.5}.notice-foot{margin-top:.9rem;padding-top:.75rem;border-top:1px solid #ecd3a4}@media(max-width:700px){.notice{padding:1.1rem}.notice-grid{grid-template-columns:1fr}.notice h2{font-size:1.12rem}}@media print{.notice{background:#fff;border:1px solid #777;border-left:1px solid #777;color:#222;box-shadow:none}.notice-label,.notice h2,.notice-grid strong{color:#222}.notice-lead,.notice-grid p,.notice-foot{color:#333}.notice-grid>div{background:#fff;border-color:#bbb}}
+</style>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23103f6b%22%2F%3E%3Cpath%20d%3D%22M13%2048%2027%2016h7l14%2032h-7l-3-8H23l-3%208zm13-14h10l-5-12z%22%20fill%3D%22%23fff%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2216%22%20r%3D%227%22%20fill%3D%22%2342d3c2%22%2F%3E%3C%2Fsvg%3E"></head>
+<body>
+<header>
+  <h1>Thorough assessment</h1>
+  <p>A clear 24 question team review for AI use across education systems.</p>
+  <p><span class="tag">24 questions</span> <span class="tag">Plain language</span> <span class="tag">Six principles</span></p>
+</header>
+<main class="wrap">
+  <script src="pdf-report.js"></script><nav class="package-nav no-print" aria-label="Assessment pages"><a href="index.html">Home</a><a href="instructions.html">Instructions</a><a href="quick-assessment.html">Quick assessment</a><a href="thorough-assessment.html" aria-current="page">Thorough assessment</a><a href="scoring.html">Scoring</a><a href="policy-and-data.html">Policy &amp; data</a></nav>
+  <div class="notice"><div class="notice-head"><span class="notice-label">Before you begin</span><h2>Work through this review as a team</h2></div><p class="notice-lead">Bring together the functions needed for this use, such as education policy, operations, data, technology, procurement, legal, privacy, security, accessibility and professional practice. Include representatives of affected groups when appropriate.</p><div class="notice-grid"><div><strong>About this form</strong><p>This form supports structured review of AI used in teaching, administration, planning, inspection, assessment, research, learner services and other education functions.</p></div><div><strong>Prepare for local use</strong><p>Interpret the questions using the laws, institutional responsibilities, education policies, languages, infrastructure and social conditions of the relevant country or jurisdiction.</p></div></div><p class="notice-foot">The categories remain consistent across contexts. Evidence and examples should reflect the education setting, system level and people affected by the use.</p></div>
+
+  <section class="panel record-panel">
+    <div class="record-heading"><div><h2>Start with the education context</h2><p class="lede">Describe the use, the level of the education system and who may be affected.</p></div><span class="record-badge">Step 1 · context</span></div>
+    <div class="section-guide"><p><strong>Purpose</strong>Place the AI use within its education, institutional and territorial context.</p><p><strong>What to prepare</strong>The intended purpose, responsible authority or institution, affected groups, data involved and an accountable review owner.</p><p><strong>What you get</strong>A context record that supports interpretation across different education systems.</p></div>
+    <div class="record-grid">
+      <div class="field"><label for="project">Short name for the AI system or use</label><input id="project" autocomplete="off" placeholder="Example: Education planning data assistant"></div>
+      <div class="field"><label for="agency">Which education authority, institution or team is responsible?</label><input id="agency" autocomplete="organization" placeholder="Example: National authority, local office, institution or service unit"></div>
+      <div class="field field-wide"><label for="purpose">What does it do, where is it used and who may be affected?</label><textarea id="purpose" rows="3" placeholder="Describe the education process, system level, intended users, affected groups and decisions or services it may influence."></textarea></div>
+      <div class="field"><label for="owner">Who is accountable for this review?</label><input id="owner" autocomplete="organization-title" placeholder="Responsible role or team"></div>
+      <div class="field"><label for="reviewDate">When is this review being completed?</label><input id="reviewDate" type="date"></div>
+    </div>
+    <p class="record-note">Use the terminology of your education system. Do not enter names, individual records, security secrets or other unnecessary sensitive information.</p>
+  </section>
+
+  <section class="panel screening">
+    <h2>Preliminary risk screen</h2>
+    <div class="section-guide"><p><strong>Purpose</strong>Identify education uses that may need stronger safeguards or specialist advice.</p><p><strong>What to prepare</strong>Know the education process, decisions, data, affected groups, scale, human review and possible consequences.</p><p><strong>What you get</strong>A percentage based screening signal that supports the team’s final decision.</p></div>
+    <div id="riskQuestions"></div><div id="screenResult" class="risk-live" aria-live="polite"><strong>Calculated route</strong><p>Complete the risk screen to see its provisional color coded result.</p></div>
+  </section>
+
+  <section class="panel">
+    <h2>Six principle assessment</h2>
+    <div class="section-guide"><p><strong>Purpose</strong>Review the same six principles across any education use or system level.</p><p><strong>What to prepare</strong>Bring relevant education policies, data documentation, test results, contracts, instructions, incident records and assigned responsibilities.</p><p><strong>What you get</strong>Six equally weighted principle indicators, practical actions and a final decision.</p></div>
+    <p class="section-help">Open one section at a time. The counter shows how many questions have been answered.</p>
+    <div id="assessment"></div>
+  </section>
+
+  <section class="panel no-print">
+    <h2>Build and export</h2>
+    <p class="small">Completion: <strong id="completionText">0 of 0 required items answered</strong>. Download the two page results PDF for dimension scores and findings.</p>
+    <div class="bar" aria-hidden="true"><span id="progressBar"></span></div>
+    <div class="actions">
+      <button id="buildBtn" type="button">Build assessment review summary</button>
+      <button id="summaryDownloadBtn" type="button" class="secondary" disabled>Download assessment review summary</button>
+      <button id="pdfBtn" type="button">Download two page results PDF</button>
+      <button id="jsonBtn" type="button" class="secondary">Download JSON</button>
+      <button id="textBtn" type="button" class="secondary">Download text report</button>
+      <button id="printBtn" type="button" class="secondary">Print or save as PDF</button>
+      <button id="clearBtn" type="button" class="secondary">Clear form</button>
+    </div>
+    <div id="summaryReady" class="summary-ready" role="status" hidden><span aria-hidden="true">✓</span><div><strong>Assessment review summary is ready</strong><p>Review it below or download an HTML copy for your records.</p></div></div>
+    <p id="validation" class="error" role="status"></p>
+  </section>
+
+  <section id="report" class="panel report" aria-live="polite">
+    <h2>Assessment review summary</h2>
+    <p class="small">The screen calculates an adapted risk score and colored route. Practice responses remain separate. The summary does not certify compliance or approve the system.</p>
+    <div id="reportBody"></div>
+  </section>
+  <div class="footer"><span>Thorough assessment · Version 2.1 · 24 questions. Export or print a copy before closing the page.</span><a class="footer-source" href="sources.html">Sources</a></div>
+</main>
+<script>
+window.addEventListener("error",function(){const message=document.getElementById("validation");if(message)message.textContent="The assessment could not start correctly in this browser. Refresh the page and try again."});
+const riskData = [
+ {id:"role",label:"What role does the AI system have in the education process?",type:"single",options:["Provides general information or drafts","Makes recommendations to staff","Influences important decisions about people, institutions, services or resources","Makes or carries out important decisions","Unsure"],flags:[2,3,4]},
+ {id:"humanCheck",label:"Before an AI result affects a person or institution, can staff review and change it?",type:"single",options:["Always","Usually","Only after the decision or action","No","Unsure"],flags:[2,3,4]},
+ {id:"dataSensitivity",label:"What type of data about learners, education staff or institutions does it use?",type:"single",options:["No personal or confidential institution level data","Personal or institution level data with limited sensitivity","Sensitive or specially protected data, including records about children or vulnerable groups where applicable","Unsure"],flags:[2,3]},
+ {id:"reach",label:"If the system makes a mistake, how widely could the effects spread across the education system?",type:"single",options:["One person, institution or a small number of cases","One service, institution, locality or community","Many institutions, services, communities or a large population","Unsure"],flags:[2,3]},
+ {id:"consequence",label:"Could a wrong or unfair result have serious consequences for a person or institution?",type:"single",options:["No significant effect","A limited and reversible effect","A serious effect","Unsure"],flags:[2,3]},
+ {id:"severeUse",label:"Is there a serious concern that this use may break the law or cause severe harm?",type:"single",options:["No concern identified","Possibly or unsure","Yes"],flags:[1,2]}
+];
+const O=(label,follow="",extra={})=>({label,follow,...extra});
+const M=(recommend)=>[O("Yes, with evidence."),O("Partly or in progress.",recommend),O("No.",recommend),O("Information not yet available.","Confirm the answer with the responsible team and record the missing evidence.",{unknown:true}),O("Not applicable, with a reason.","",{na:true})];
+const sections = [
+ {id:"rights",title:"2. Human rights, dignity and equity",questions:[
+  {id:"hr1",type:"single",prompt:"Have we identified how learners, families, education staff, institutions or communities could be harmed, excluded or treated unfairly?",recommend:"Map the affected groups and institutions, including those who may be less visible in the data or decision process.",options:M("Identify affected groups and check how the use could harm, exclude or disadvantage them.")},
+  {id:"hr2",type:"single",prompt:"Have we checked whether performance or outcomes differ unfairly across relevant groups and education contexts?",recommend:"Compare results across relevant languages, disabilities, locations, genders, socioeconomic conditions, institution types and other locally relevant factors.",options:M("Test performance and outcomes across relevant groups and contexts, then address material differences.")},
+  {id:"hr3",type:"single",prompt:"Can everyone access the service, including people who face disability, language, location, connectivity or cost barriers?",recommend:"Check accessibility and provide assisted, offline or non digital routes where needed.",options:M("Remove access barriers and provide a practical alternative route.")}
+ ]},
+ {id:"transparency",title:"3. Transparency and explainability",questions:[
+  {id:"tr1",type:"single",prompt:"Are affected people and responsible staff clearly told when, why and how AI is being used in the education process?",recommend:"Use accessible information suited to the audience, including learners and families where relevant.",options:M("Explain when and why AI is used, what role it plays and who is responsible.")},
+  {id:"tr2",type:"single",prompt:"Can we explain an important result and provide a way to have it reviewed by a responsible person?",recommend:"Explain the main reasons, evidence and limits, and provide a clear human review route.",options:M("Provide understandable explanations and an effective route for human review or challenge.")}
+ ]},
+ {id:"security",title:"4. Security and robustness",questions:[
+  {id:"sr1",type:"single",prompt:"Has the system been tested in realistic conditions for its intended education use?",recommend:"Record tests, results, limits and open problems across representative operating conditions.",options:M("Test the system in realistic education contexts before relying on it.")},
+  {id:"sr2",type:"single",prompt:"Is the system protected against misuse, unauthorised access, data leakage and attacks?",recommend:"Confirm security controls, supplier responsibilities and access arrangements with the technical or security team.",options:M("Address the main security risks for education data, users and infrastructure.")},
+  {id:"sr3",type:"single",prompt:"Can responsible teams detect problems, correct or stop the system and continue the education process safely?",recommend:"Define monitoring, incident response, communication and a workable alternative process.",options:M("Set up monitoring, response responsibilities and a safe continuity option.")}
+ ]},
+ {id:"privacy",title:"5. Privacy and data protection",questions:[
+  {id:"pr1",type:"single",prompt:"Do we have a clear and valid reason to use each type of personal data?",recommend:"Record why each data type is needed, who may use it and the applicable authority or legal basis.",options:M("Review necessity, purpose and applicable rules before using personal data.")},
+  {id:"pr2",type:"single",prompt:"Do we collect only the personal data we need and protect, correct and delete them properly?",recommend:"Set rules for collection, access, correction, retention, deletion and supplier use.",options:M("Reduce unnecessary data and strengthen protection, access, sharing and deletion controls.")}
+ ]},
+ {id:"accountability",title:"6. Human oversight and accountability",questions:[
+  {id:"ha1",type:"single",prompt:"Is it clear who is responsible for the system at each stage?",recommend:"Assign accountable authorities and supporting roles across the full lifecycle.",options:M("Clarify who is accountable for the use, supplier relationship, operation and outcomes.")},
+  {id:"ha2",type:"single",prompt:"Do trained staff have the time, information and authority to question, stop, correct or override the system?",recommend:"Provide training, clear authority, usable instructions and an alternative process.",options:M("Ensure human oversight is practical and staff can intervene effectively.")},
+  {id:"ha3",type:"single",prompt:"Can learners, families, staff or institutions challenge a result, report a problem and receive a timely response?",recommend:"Provide accessible reporting, review, response and correction processes.",options:M("Create effective routes for complaints, review, remedy and correction.")}
+ ]},
+ {id:"sustainability",title:"7. Sustainability and wellbeing",questions:[
+  {id:"sw1",type:"single",prompt:"Have we assessed how the system could affect learner wellbeing and staff roles, workload and working conditions?",recommend:"Consult affected people and plan changes, training, support and workload protections.",options:M("Assess effects on wellbeing and work, then agree the support and safeguards needed.")},
+  {id:"sw2",type:"single",prompt:"Have long term financial, infrastructure, supplier dependency, environmental and computing costs been considered?",recommend:"Review total costs, required infrastructure, exit options, energy use and supplier dependency.",options:M("Identify long term resource and dependency risks and practical ways to reduce them.")}
+ ]},
+ {id:"residual",title:"8. Risk synthesis, mitigation and residual risk",questions:[
+  {id:"synth1",type:"text",prompt:"What are the most important remaining education, rights, data, operational, technical or supplier risks, and who could be affected?",placeholder:"Risk | people or institutions affected | what is still uncertain",recommend:"Focus on the few risks that matter most in this education context."},
+  {id:"synth2",type:"text",prompt:"What will reduce each risk, who is responsible, and when will it be done?",placeholder:"Risk | action | owner | date | remaining level",recommend:"Give every important action an owner and date."},
+  {id:"synth4",type:"single",prompt:"What should happen next?",recommend:"Choose the option that best reflects the team’s decision and record any actions, responsible roles and review dates.",options:[O("Proceed as planned."),O("Proceed with safeguards and monitoring.","Record the safeguards, responsible roles, dates and monitoring plan."),O("Run a limited pilot and reassess before expanding.","Define the pilot scope, success criteria, safeguards and review date."),O("Build staff capacity before proceeding.","Provide the training, time, guidance and authority needed for safe use."),O("Review policy, data governance or procurement before proceeding.","Update the relevant rules, responsibilities, data arrangements or contract conditions."),O("Pause for specialist review.","Seek the appropriate legal, rights, privacy, security, ethics or technical review."),O("Do not proceed.","Record why the use is not acceptable and whether a different approach should be considered.")]}
+ ]}
+];
+
+
+function translateKnownPortuguese(s){let t=String(s??"");const pairs=[["Questionário Principal de Avaliação","Main Assessment Questionnaire"],["O Questionário Principal","The Main Questionnaire"],["analisa em profundidade","examines in depth"],["os aspectos éticos e de governança do projeto de IA","the ethical and governance aspects of the AI project"],["conforme o nível de risco definido na Avaliação de Riscos","according to the risk level defined in the Risk Assessment"],["Ele busca identificar boas práticas","It seeks to identify good practices"],["e pontos críticos que precisam ser melhorados","and critical areas that need improvement"],["pontos críticos que precisam ser melhorados","critical areas that need improvement"],["Pontuação","Score"]];for(const [from,to] of pairs)t=t.replace(new RegExp(from,"gi"),to);return t;}
+function esc(s){return translateKnownPortuguese(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+const sectionGuides = {
+ rights:["Check for harm, exclusion and unfair treatment across the education system.","Affected groups, languages, disabilities, locations, institution types, access conditions and outcome differences.","Actions to reduce unfair effects and barriers."],
+ transparency:["Check whether AI use, responsibility and important results are understandable.","Information for affected groups, explanations, records and human review routes.","Clear information and effective review or challenge routes."],
+ security:["Check whether the system works safely in its intended education context and can recover from problems.","Representative tests, security checks, monitoring, incident response and continuity arrangements.","Actions for testing, protection, response and safe continuity."],
+ privacy:["Check whether learner, staff and other personal data are necessary and protected.","Purpose, authority, access, accuracy, sharing, retention, deletion and supplier arrangements.","Actions to reduce data use and strengthen protection."],
+ accountability:["Make lifecycle responsibility, meaningful human control and remedy routes clear.","Accountable authorities, trained staff, instructions, oversight and complaint processes.","Clear ownership and practical ways to intervene, review and correct."],
+ sustainability:["Consider wellbeing, workforce, infrastructure, financial, supplier and environmental effects.","Feedback from affected people, skills and workload needs, total costs, infrastructure and exit options.","Support for people and actions to manage long term resource and dependency risks."],
+ residual:["Turn the review into an education risk and decision record.","The main risks, affected groups or institutions, actions, owners, dates and review triggers.","A clear decision, conditions and next review point."]
+};
+function appendSectionGuide(parent, parts){
+ const guide=document.createElement("div");guide.className="section-guide";guide.setAttribute("aria-label","Section guidance");
+ const labels=["Purpose","What to prepare","What you get"];
+ parts.forEach((value,index)=>{const p=document.createElement("p");const strong=document.createElement("strong");strong.textContent=labels[index];const span=document.createElement("span");span.textContent=value;p.append(strong,span);guide.appendChild(p)});
+ parent.appendChild(guide);
+}
+
+function renderQuestion(q,scope="full",numberLabel=""){
+ const fieldset=document.createElement("fieldset");fieldset.className="question";fieldset.dataset.qid=q.id;fieldset.dataset.scope=scope;
+ if(q.showWhen){fieldset.classList.add("hidden");fieldset.dataset.showParent=q.showWhen.id;fieldset.dataset.showValues=q.showWhen.values.join("||");}
+  const legend=document.createElement("legend");const prompt=q.prompt||q.label||"Assessment question";if(numberLabel){const number=document.createElement("span");number.className="question-number";number.textContent=numberLabel;const text=document.createElement("span");text.textContent=prompt;legend.append(number,text)}else legend.textContent=prompt;fieldset.appendChild(legend);
+ if(q.type==="text"){
+  const area=document.createElement("textarea");area.name=q.id;area.rows=4;area.placeholder=q.placeholder||"Write a response";area.setAttribute("aria-label",q.prompt);area.dataset.required="true";fieldset.appendChild(area);
+ }else{
+  const list=document.createElement("div");list.className="choices";
+  q.options.forEach((entry,i)=>{
+   const opt=typeof entry==="string"?{label:entry}:entry;
+   const row=document.createElement("label");row.className="choice";if(scope==="full"){const label=opt.label||"";if(opt.na||/^(n\/a|not applicable)\b/i.test(label))row.classList.add("practice-na");else if(opt.unknown)row.classList.add("practice-partial");else if(opt.follow)row.classList.add(/^(no\b|not\b|none\b|without\b|inadequate\b|insufficient\b|unknown\b)/i.test(label)?"practice-gap":"practice-partial");else if(q.type==="multi")row.classList.add(q.none===label?"practice-gap":"practice-review");else row.classList.add("practice-good");}
+   const input=document.createElement("input");input.type=q.type==="multi"?"checkbox":"radio";input.name=q.id;input.value=String(i);input.dataset.follow=opt.follow||"";input.dataset.na=opt.na?"true":"false";if(q.type==="single"&&i===0)input.required=true;
+   const text=document.createElement("span");text.textContent=opt.label;row.append(input,text);list.appendChild(row);
+  });
+  fieldset.appendChild(list);fieldset.dataset.kind=q.type;
+ }
+ if(q.recommend){const hint=document.createElement("details");hint.className="hint hint-details";const summary=document.createElement("summary");summary.textContent="What to check";const note=document.createElement("div");note.textContent=q.recommend;hint.append(summary,note);fieldset.appendChild(hint);}
+ if(q.type==="multi")fieldset.dataset.none=q.none||"";
+ return fieldset;
+}
+function render(){
+ const risk=document.getElementById("riskQuestions");riskData.forEach((q,index)=>risk.appendChild(renderQuestion(q,"risk","Risk "+String(index+1).padStart(2,"0"))));
+ const target=document.getElementById("assessment");sections.forEach((sec,sectionIndex)=>{
+  const box=document.createElement("details");box.className="assessment-section";box.dataset.section=sec.id;if(sectionIndex===0)box.open=true;
+  const heading=document.createElement("summary");const title=document.createElement("span");title.textContent=sec.title;const count=document.createElement("span");count.className="section-count";count.textContent="0 of "+sec.questions.length;heading.append(title,count);box.appendChild(heading);
+  const body=document.createElement("div");body.className="assessment-section-body";appendSectionGuide(body,sectionGuides[sec.id]);
+  const sectionNumber=sec.title.match(/^(\d+)\./)?.[1]||"";sec.questions.forEach((q,index)=>body.appendChild(renderQuestion(q,"full",sectionNumber?sectionNumber+"."+(index+1):String(index+1))));
+  box.appendChild(body);target.appendChild(box);
+ });
+ const d=new Date();document.getElementById("reviewDate").value=d.toISOString().slice(0,10);
+}
+render();
+function selectorPart(value){return String(value).replace(/([\\"'])/g,"\\\\$1")}
+function valuesFor(name){return [...document.querySelectorAll(`[name="${selectorPart(name)}"]:checked`)].map(x=>x.value)}
+function getRiskValue(id){return valuesFor(id).map(v=>riskData.find(q=>q.id===id)?.options[Number(v)]).filter(Boolean)}
+function updateRiskConditionals(){
+ document.querySelectorAll("#riskQuestions [data-show-parent]").forEach(el=>{
+  const parent=el.dataset.showParent;const q=riskData.find(x=>x.id===parent);const chosen=valuesFor(parent).map(v=>q?.options[Number(v)]);const wanted=el.dataset.showValues.split("||");const show=chosen.some(v=>wanted.includes(v));
+  el.classList.toggle("hidden",!show);el.querySelectorAll("input,textarea,select").forEach(input=>{input.disabled=!show;if(!show){if(input.type==="radio"||input.type==="checkbox")input.checked=false;else input.value="";}});
+ });
+}
+updateRiskConditionals();
+const riskScoreMap={
+ role:{points:[0,1,2,3,2],weight:1},
+ humanCheck:{points:[0,1,2,3,2],weight:1},
+ dataSensitivity:{points:[0,1,3,2],weight:1},
+ reach:{points:[0,1,3,2],weight:1},
+ consequence:{points:[0,1,3,2],weight:1}
+};
+function calculateRiskScreen(risk){
+ const relevant=riskData;
+ const answered=relevant.filter(q=>risk[q.id]&&(Array.isArray(risk[q.id])?risk[q.id].length:1)).length;
+ if(answered<relevant.length)return{complete:false,answered,total:relevant.length,tier:"Incomplete",cls:"missing",points:null,percent:null,highTriggers:0,excessive:[]};
+ let points=0,maxPoints=0;
+ for(const q of relevant){const spec=riskScoreMap[q.id];if(!spec)continue;const vals=(Array.isArray(risk[q.id])?risk[q.id]:[risk[q.id]]).map(v=>q.options.indexOf(v)).filter(i=>i>=0);if(!vals.length)continue;const item=spec.mode==="max"?Math.max(...vals.map(i=>spec.points[i]||0)):vals.reduce((sum,i)=>sum+(spec.points[i]||0),0);points+=item*spec.weight;maxPoints+=Math.max(...spec.points)*spec.weight}
+ points=Math.round(points*10)/10;
+ const percent=Math.round(points/maxPoints*100);
+ const index=id=>riskData.find(q=>q.id===id)?.options.indexOf(risk[id])??-1;
+ const concerns=risk.severeUse==="Yes"?[risk.severeUse]:[];
+ const uncertain=["role","humanCheck","dataSensitivity","reach","consequence"].some(id=>risk[id]==="Unsure")||risk.severeUse==="Possibly or unsure";
+ const highSignals=[index("role")===3,index("humanCheck")===3,index("dataSensitivity")===2,index("reach")===2,index("consequence")===2].filter(Boolean).length;
+ let tier="Low",cls="low";
+ if(concerns.length){tier="Excessive or unresolved";cls="excessive"}
+ else if(percent>=50||highSignals>=2||(index("dataSensitivity")===2&&index("consequence")===2)){tier="High";cls="high"}
+ else if(percent>=25||highSignals>=1||uncertain){tier="Medium";cls="medium"}
+ return{complete:true,answered,total:relevant.length,tier,cls,points,percent,maxPoints,highTriggers:highSignals,uncertain,excessive:concerns}
+}
+function renderScreenResult(){
+ const box=document.getElementById("screenResult");if(!box)return;
+ const risk={};riskData.forEach(q=>{const picks=valuesFor(q.id).map(v=>q.options[Number(v)]);risk[q.id]=q.type==="multi"?picks:picks[0]||""});
+ const s=calculateRiskScreen(risk);
+ if(!s.complete){box.innerHTML='<strong>Calculated route</strong><p><span class="risk-tier missing">Incomplete</span> Answer '+(s.total-s.answered)+' more screening prompt(s) to calculate the route.</p>';return}
+ const message=s.tier==="Excessive or unresolved"?"Pause routine progression and obtain local legal, rights, safety and ethics review. This is a review signal, not a finding of illegality.":s.tier==="High"?"Complete the Thorough review and obtain strong governance or specialist oversight.":s.tier==="Medium"?"Use the Thorough pathway and define tailored safeguards, owners and review points.":"Low initial signal. Continue the practice review and document why routine safeguards are sufficient.";
+ box.innerHTML='<strong>Calculated route</strong><p><span class="risk-tier '+s.cls+'">'+s.tier+'</span> <strong>'+s.percent+'% screening signal</strong></p><p>'+message+'</p><p class="small"><span>This is a screening score, not a probability or grade.</span> '+s.highTriggers+' high concern trigger(s)'+(s.uncertain?'; uncertainty raises the route to at least Medium':"")+'. Scoring guide: <a href="scoring.html">thresholds and interpretation</a>.</p>';
+}
+function fieldValue(id){return document.querySelector(`[name="${selectorPart(id)}"]`)?.value||document.getElementById(id)?.value||""}
+function gather(){
+ const risk={};riskData.forEach(q=>{const selected=valuesFor(q.id);risk[q.id]=q.type==="multi"?selected.map(v=>q.options[Number(v)]):selected.length?q.options[Number(selected[0])]:"";});
+ const answers={};const follow=[];let answered=0,total=0;
+ for(const sec of sections)for(const q of sec.questions){total++;
+  if(q.type==="text"){const val=fieldValue(q.id).trim();answers[q.id]=val;if(val)answered++;else follow.push({section:sec.title,prompt:q.prompt,action:q.recommend||"Complete this risk record."});}
+  else if(q.type==="multi"){
+   const selected=valuesFor(q.id).map(v=>q.options[Number(v)]);answers[q.id]=selected;if(selected.length)answered++;
+   if(q.none&&selected.includes(q.none))follow.push({section:sec.title,prompt:q.prompt,action:q.recommend});
+   if(!selected.length)follow.push({section:sec.title,prompt:q.prompt,action:"Record the applicable safeguards or state that none are in place."});
+  }else{
+   const selected=valuesFor(q.id);const idx=selected.length?Number(selected[0]):-1;const opt=idx>=0?q.options[idx]:null;answers[q.id]=opt?opt.label:"";if(opt)answered++;
+   if(opt?.follow)follow.push({section:sec.title,prompt:q.prompt,action:opt.follow});
+  }
+ }
+ let riskAnswered=0,riskTotal=riskData.length;for(const q of riskData){if(risk[q.id]&&(Array.isArray(risk[q.id])?risk[q.id].length:1))riskAnswered++;}
+ const excessive=risk.severeUse==="Yes"?[risk.severeUse]:[];
+ const screening=calculateRiskScreen(risk);return {meta:{project:fieldValue("project"),agency:fieldValue("agency"),purpose:fieldValue("purpose"),accountableOwner:fieldValue("owner"),assessmentDate:fieldValue("reviewDate")},riskScreen:risk,screening,riskAnswered,riskTotal,provisionalTier:screening.tier,excessiveFlags:excessive,answers,answered,total,followups:follow};
+}
+function progress(){const d=gather();const total=d.total+d.riskTotal;const done=d.answered+d.riskAnswered;document.getElementById("completionText").textContent=`${done} of ${total} required questions answered`;document.getElementById("progressBar").style.width=Math.round(done/total*100)+"%";sections.forEach(sec=>{const box=document.querySelector(`[data-section="${sec.id}"]`);if(!box)return;const answered=sec.questions.filter(q=>{const value=d.answers[q.id];return Array.isArray(value)?value.length:String(value||"").trim().length}).length;const count=box.querySelector(".section-count");if(count)count.textContent=answered+" of "+sec.questions.length;});}
+document.addEventListener("change",()=>{renderScreenResult();progress();});document.addEventListener("input",()=>{renderScreenResult();progress()});renderScreenResult();progress();
+function listHtml(values){return values&&values.length?`<ul>${values.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:"<p>Not provided.</p>"}
+function practiceStatus(q,answer){if(q.type==="text")return answer?{label:"Team judgment recorded",cls:"review"}:{label:"Not answered",cls:"missing"};if(q.type==="multi"){const selected=valuesFor(q.id).map(v=>q.options[Number(v)]);if(!selected.length)return{label:"Not answered",cls:"missing"};if(q.none&&selected.includes(q.none))return{label:"Gap identified",cls:"gap"};return{label:"Evidence or action to review",cls:"review"}}const indexes=valuesFor(q.id);if(!indexes.length)return{label:"Not answered",cls:"missing"};const opt=q.options[Number(indexes[0])],label=opt?.label||"";if(opt?.na||/^(n\/a|not applicable)\b/i.test(label))return{label:"Not applicable",cls:"na"};if(opt?.unknown)return{label:"Information needed",cls:"review"};if(opt?.follow)return/^(no\b|not\b|none\b|without\b|inadequate\b|insufficient\b|unknown\b)/i.test(label)?{label:"Gap identified",cls:"gap"}:{label:"Improvement action",cls:"action"};return{label:"No follow up prompt",cls:"clear"}}
+function riskStatus(id){const q=riskData.find(item=>item.id===id);if(!q)return{label:"Review",cls:"review"};const selected=valuesFor(id).map(Number);if(id==="severeUse"){if(selected.includes(1))return{label:"Needs specialist review",cls:"action"};if(selected.includes(2))return{label:"Escalation signal",cls:"gap"}}if(selected.some(index=>(q.flags||[]).includes(index)))return{label:"Review signal",cls:"action"};return{label:"No trigger selected",cls:"clear"}}
+function build(){
+ const d=gather();const validation=document.getElementById("validation");validation.textContent="";
+ const body=document.getElementById("reportBody");
+ const riskPairs=Object.entries(d.riskScreen).filter(([k,v])=>v&&(!Array.isArray(v)||v.length)).map(([k,v])=>{const state=riskStatus(k);return `<li><strong>${esc(riskData.find(q=>q.id===k)?.label||k)}</strong><br><span class="answer-status ${state.cls}">${esc(state.label)}</span> ${esc(Array.isArray(v)?v.join(", "):v)}</li>`}).join("");
+ const followHtml=d.followups.length?`<ol class="followup">${d.followups.map(x=>`<li><span class="answer-status action">Improvement action</span><br><strong>${esc(x.section)}:</strong> ${esc(x.action)} <span class="small">Prompt: ${esc(x.prompt)}</span></li>`).join("")}</ol>`:'<p class="ok">No automatic follow up prompts were triggered by the selected answers. The team should still review the evidence and residual risk.</p>';
+ const acceptance=d.answers.synth4||"Not provided";
+ const caution=d.screening.tier==="Excessive or unresolved"?"<div class='notice'><strong>Pause for specialist review</strong>One or more severe harm or potentially prohibited use concerns were selected. Pause routine progression and seek local legal, rights, safety and ethics review. This is a screening prompt, not a legal determination.</div>":"";
+
+ const responseHtml=sections.map(sec=>`<div class="reportcard"><h3>${esc(sec.title)}</h3><ul>${sec.questions.map(q=>{const answer=d.answers[q.id],rendered=Array.isArray(answer)?answer.join("; "):answer,state=practiceStatus(q,answer);return `<li><strong>${esc(q.prompt)}</strong><br><span class="answer-status ${state.cls}">${esc(state.label)}</span><br><span style="white-space:pre-wrap">${esc(rendered||"Not answered")}</span></li>`;}).join("")}</ul></div>`).join("");
+ const screenBadge='<span class="risk-tier '+d.screening.cls+'">'+esc(d.screening.tier)+(d.screening.complete?' · '+d.screening.percent+'%':'')+'</span>';const decisionClass=acceptance.startsWith("Proceed as planned")?"clear":acceptance.startsWith("Pause")||acceptance.startsWith("Do not proceed")?"gap":acceptance!=="Not provided"?"action":"missing";const decisionBadge=`<span class="answer-status ${decisionClass}">${esc(acceptance.split(".")[0]||"Not provided")}</span>`;
+ body.innerHTML=`${caution}<div class="reportcard"><h3>Education use context</h3><p><strong>AI system or use:</strong> ${esc(d.meta.project||"Not provided")}<br><strong>Responsible education authority or institution:</strong> ${esc(d.meta.agency||"Not provided")}<br><strong>Education purpose, context and affected groups:</strong> ${esc(d.meta.purpose||"Not provided")}<br><strong>Responsible review lead:</strong> ${esc(d.meta.accountableOwner||"Not provided")}<br><strong>Assessment date:</strong> ${esc(d.meta.assessmentDate||"Not provided")}</p><p><strong>Preliminary risk route:</strong> ${screenBadge}. ${d.screening.complete?d.screening.highTriggers+" high concern trigger(s).":"The screen is incomplete; no category was calculated."}</p><p><strong>Completion:</strong> ${d.answered+d.riskAnswered} of ${d.total+d.riskTotal} required questions answered.</p></div><div class="reportcard"><h3>Risk screen responses</h3><ul>${riskPairs||"<li>No screening responses provided.</li>"}</ul></div><div class="reportcard"><h3>Residual risk decision</h3><p>${decisionBadge}</p><p><strong>Priority risks and affected people or institutions:</strong><br>${esc(d.answers.synth1||"Not provided.")}</p><p><strong>Actions, responsible roles, dates and remaining risk:</strong><br>${esc(d.answers.synth2||"Not provided.")}</p></div><h3>Responses by section</h3>${responseHtml}<div class="reportcard"><h3>Follow up prompts</h3>${followHtml}</div><p class="small">This summary records the team’s responses at one point in time. It does not verify the evidence, confirm compliance or monitor the system in operation.</p>`;
+ document.getElementById("report").classList.add("ready");document.getElementById("summaryReady").hidden=false;document.getElementById("summaryDownloadBtn").disabled=false;return d;
+}
+function thoroughPdfReport(d){
+ const dimensions=[];
+ for(const sec of sections.filter(s=>s.id!=="residual")){
+  let points=0,max=0,missing=0,good=0,attention=0;
+  for(const q of sec.questions){
+   let st=practiceStatus(q,d.answers[q.id]);
+   if(st.cls==="na")continue;
+   max+=2;
+   if(st.cls==="clear"){points+=2;good++}
+   else if(st.cls==="action"){points++;attention++}
+   else if(st.cls==="review"){attention++}
+   else if(st.cls==="missing"){missing++;attention++}
+   else attention++;
+  }
+  const ratio=max?points/max:null;
+  dimensions.push({name:sec.title,ratio,status:missing?"partial":assessmentPdfStatusFromRatio(ratio),scoreText:ratio==null?"Pending":Math.round(ratio*100)+"%",detail:good+" item"+(good===1?"":"s")+" supported by evidence, "+attention+" requiring attention"});
+ }
+ const r=d.screening,rs=r.tier==="Low"?"good":r.tier==="Medium"?"partial":r.tier==="Incomplete"?"missing":"gap",findings=[];
+ if((d.answers.synth1||"").trim())findings.push({title:"Priority risks recorded",text:d.answers.synth1,status:"partial"});
+ if((d.answers.synth2||"").trim())findings.push({title:"Actions and remaining risk",text:d.answers.synth2,status:"partial"});
+ if(r.tier==="High"||r.tier==="Excessive or unresolved")findings.push({title:"The preliminary route requires stronger review",text:r.tier+" route. Complete the appropriate education, governance, legal, rights, data and technical review before relying on the system.",status:"gap"});
+ for(const item of (d.followups||[]))findings.push({title:item.section,text:item.action,status:item.action&&/pause|do not|before proceeding|before launch/i.test(item.action)?"gap":"partial"});
+ if(!(d.answers.synth1||"").trim())findings.push({title:"Priority risks have not been recorded",text:"Record the main education, rights, data, operational, technical and supplier risks and who or what could be affected.",status:"missing"});
+ const valid=dimensions.filter(x=>x.ratio!=null),strongest=[...valid].sort((a,b)=>b.ratio-a.ratio)[0],weakest=[...valid].sort((a,b)=>a.ratio-b.ratio)[0];
+ const takeaways=["Preliminary route: "+d.provisionalTier+". The screening result supports human judgement.","Area with the strongest evidence: "+(strongest?.name||"not enough information")+".","Area requiring the most attention: "+(weakest?.name||"not enough information")+".","Assign a responsible role, date and completion evidence to every orange or red result.","Repeat the assessment when the purpose, data, supplier, model, scale, context or affected groups change."];
+ const avg=valid.reduce((a,x)=>a+x.ratio,0)/(valid.length||1);
+ const detail=r.complete?r.percent+"% screening signal and "+r.highTriggers+" high concern answer"+(r.highTriggers===1?".":"s."):"Complete the risk screen before using the route.";
+ return{title:"Responsible AI in Education Compass",pathway:"Thorough assessment",meta:d.meta,overall:{label:d.provisionalTier,status:rs,ratio:r.tier==="Incomplete"?null:avg},overallDetail:detail,riskRoute:{label:r.tier,status:rs,detail},dimensions,findings:findings.slice(0,5),takeaways,note:"This self assessment records the team’s evidence and judgement. It does not verify compliance or authorise the use."};
+}
+document.getElementById("buildBtn").addEventListener("click",()=>{build();const report=document.getElementById("report");if(report&&typeof report.scrollIntoView==="function")report.scrollIntoView({behavior:"smooth",block:"start"});});
+function download(name,type,content){if(type.startsWith("text/"))content=translateKnownPortuguese(content);const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([window.civicTranslateExport?window.civicTranslateExport(content,type):content],{type}));a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);}
+function downloadSummaryHtml(filename,title,subtitle,body){const html='<!doctype html><html lang="'+(window.civicLanguage?window.civicLanguage():"en")+'"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(title)+'</title><style>body{margin:0;background:#f3f6f9;color:#17324d;font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}main{max-width:980px;margin:2rem auto;padding:0 1rem}header{background:#103f6b;color:#fff;border-radius:14px;padding:1.4rem 1.6rem;margin-bottom:1rem}header h1{margin:0 0 .25rem;font-size:1.5rem}header p{margin:0;color:#e7f1fa}section{background:#fff;border:1px solid #d8e0e8;border-radius:12px;padding:1rem 1.2rem}footer{color:#526579;font-size:.85rem;margin:1rem 0}@media print{body{background:#fff}main{max-width:none;margin:0}header{border:0;border-radius:0}}</style></head><body><main><header><h1>'+esc(title)+'</h1><p>'+esc(subtitle)+'</p></header><section>'+body.innerHTML+'</section><footer>Generated from the education AI self assessment.</footer></main></body></html>';download(filename,"text/html;charset=utf-8",html)}
+document.addEventListener("click",event=>{if(event.target.id==="buildBtn"){setTimeout(()=>{const report=document.getElementById("report");if(report.classList.contains("ready")){document.getElementById("summaryReady").hidden=false;document.getElementById("summaryDownloadBtn").disabled=false;document.getElementById("validation").textContent="Assessment review summary is ready. Review it below or download a copy."}},0)}if(event.target.id==="summaryDownloadBtn"&&!event.target.disabled){downloadSummaryHtml("education-ai-thorough-assessment-summary.html","Assessment review summary","Thorough assessment",document.getElementById("reportBody"))}if(event.target.id==="clearBtn"){document.getElementById("summaryReady").hidden=true;document.getElementById("summaryDownloadBtn").disabled=true}});
+document.getElementById("jsonBtn").addEventListener("click",()=>{const d=build();if(d)download("education-ai-thorough-assessment.json","application/json",JSON.stringify({...d,exportedAt:new Date().toISOString()},null,2));});
+document.getElementById("textBtn").addEventListener("click",()=>{const d=build();if(!d)return;const lines=["Responsible AI in Education Compass — Thorough assessment",`AI system or use: ${d.meta.project||"Not provided"}`,`Responsible education authority or institution: ${d.meta.agency||"Not provided"}`,`Education purpose, context and affected groups: ${d.meta.purpose||"Not provided"}`,`Responsible review lead: ${d.meta.accountableOwner||"Not provided"}`,`Assessment date: ${d.meta.assessmentDate||"Not provided"}`,`Preliminary risk route: ${d.screening.tier}`,`Screening result: ${d.screening.tier} (${d.screening.percent}% screening signal)`,"","Risk screen:",...Object.entries(d.riskScreen).map(([k,v])=>`${k}: ${Array.isArray(v)?v.join(", "):v||"Not answered"}`),"","Thorough questionnaire responses:",...sections.flatMap(s=>["",s.title,...s.questions.map(q=>`${q.prompt}\n${Array.isArray(d.answers[q.id])?d.answers[q.id].join("; "):d.answers[q.id]||"Not answered"}`)]),"","Key risk register:",`Priority risks and affected people or institutions: ${d.answers.synth1||"Not provided"}`,`Actions, responsible roles, dates and remaining risk: ${d.answers.synth2||"Not provided"}`,`Acceptability: ${d.answers.synth4||"Not provided"}`,"","Follow up prompts:",...d.followups.map(x=>`• ${x.section}: ${x.action}`),"","The risk screen is a normalized percentage signal. It supports team discussion but is not an official classification, legal opinion or measure of educational quality."].join("\n");download("education-ai-thorough-assessment.txt","text/plain;charset=utf-8",lines);});
+document.getElementById("printBtn").addEventListener("click",()=>{build();window.print();});
+document.getElementById("clearBtn").addEventListener("click",()=>{if(!confirm("Clear all answers in this page? This cannot be undone."))return;document.querySelectorAll("input[type=radio],input[type=checkbox]").forEach(x=>x.checked=false);document.querySelectorAll("textarea,input[type=text]").forEach(x=>x.value="");document.getElementById("reviewDate").value=new Date().toISOString().slice(0,10);document.getElementById("report").classList.remove("ready");document.getElementById("reportBody").innerHTML="";updateRiskConditionals();progress();});
+</script><script>document.getElementById("pdfBtn").addEventListener("click",()=>{const d=build();downloadAssessmentPdf(thoroughPdfReport(d),"education-ai-thorough-assessment-results.pdf");document.getElementById("validation").textContent="Two page results PDF downloaded.";});</script>
+</body>
+</html>
+<script src="theme.js?v=spanish-toggle-v6"></script>
